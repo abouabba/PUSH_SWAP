@@ -103,3 +103,10 @@ This is a visual representation of different Big O complexities. It compares the
 
 
 🕤 O(2ⁿ) (Exponential Time): Grows extremely fast, often impractical for large inputs.
+
+# Known sorting algorithms
+To achieve the push swap project, you will need to choose a sorting algorithm that will work with the intructions you are allowed to use and that will make the fewest possible moves.
+
+Below is an example of sorting algorithms and their complexity, according to three different methods for the time complexity and with one for the space complexity.
+
+![image](https://github.com/user-attachments/assets/6419fe37-1bbe-4c71-8c28-a707400601ee)
