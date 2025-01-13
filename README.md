@@ -77,3 +77,5 @@ There are two main types of algorithm complexity:
 
 2. Space complexity: measures the amount of memory an algorithm takes to solve a problem.
 
+# Here is a diagram that compares several levels of complexity/Big O notations with each other:
+
