@@ -79,3 +79,4 @@ There are two main types of algorithm complexity:
 
 # Here is a diagram that compares several levels of complexity/Big O notations with each other:
 
+![image](https://github.com/user-attachments/assets/c2e32414-db48-4c95-b55c-507428659eaf)
