@@ -60,7 +60,7 @@ rrr : rra and rrb at the same time.
 
 # ****Algorithms****
 
-              ![image](https://github.com/user-attachments/assets/eb151018-a77f-4a2b-8e16-375b7c082f53)
+   ![image](https://github.com/user-attachments/assets/eb151018-a77f-4a2b-8e16-375b7c082f53)
 
 
 An algorithm is a step-by-step procedure or set of rules designed to solve a specific problem or perform a task. Algorithms are fundamental in computer science and programming, as they provide the logic for solving computational problems efficiently
