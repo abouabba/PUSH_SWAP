@@ -64,3 +64,12 @@ rrr : rra and rrb at the same time.
 
 
 An algorithm is a step-by-step procedure or set of rules designed to solve a specific problem or perform a task. Algorithms are fundamental in computer science and programming, as they provide the logic for solving computational problems efficiently
+
+# Algorithm complexity
+Algorithm complexity refers to the amount of resources (such as time or memory) required for an algorithm to solve a problem. It provides a way to measure and compare the efficiency of different algorithms.
+
+There are two main types of algorithm complexity:
+
+1. Time complexity: measures the amount of time an algorithm takes to solve a problem. 
+
+2. Space complexity: measures the amount of memory an algorithm takes to solve a problem.
