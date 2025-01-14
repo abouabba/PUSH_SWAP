@@ -24,43 +24,28 @@ which cannot be duplicated.
 
 following operations at your disposal:
 
-sa (swap a): Swap the first 2 elements at the top of stack a.
 
-Do nothing if there is only one or no elements.
+🇲🇦 sa (swap a): Swap the first 2 elements at the top of the stack a. Does nothing if there is only one or none. 
 
-sb (swap b): Swap the first 2 elements at the top of stack b.
+🇲🇦 sb (swap b) : Swap the first 2 elements at the top of the stack b. Does nothing if there is only one or none. 
 
-Do nothing if there is only one or no elements.
+🇲🇦 ss : sa and sb at the same time. 
 
-ss : sa and sb at the same time.
+🇲🇦 pa (push a): Takes the first element on top of b and puts it on a. Does nothing if b is empty. 
 
-pa (push a): Take the first element at the top of b and put it at the top of a.
+🇲🇦 pb (push b): Takes the first element on top of a and puts it on b. Does nothing if a is empty. 
 
-Do nothing if b is empty.
+🇲🇦 ra (rotate a): Shifts all the elements of the stack a up by one position. The first element becomes the last. 
 
-pb (push b): Take the first element at the top of a and put it at the top of b.
+🇲🇦 rb (rotate b) : Shifts all the elements of the stack b one position upwards. The first element becomes the last one. 
 
-Do nothing if a is empty.
+🇲🇦 rr : ra and rb at the same time. 
 
-ra (rotate a): Shift up all elements of stack a by 1.
+🇲🇦 rra (reverse rotate a): Shifts all elements of the stack down one position. the stack a. The last element becomes the first. 
 
-The first element becomes the last one.
+🇲🇦 rrb (reverse rotate b): Shifts all the elements of the stack b one position downwards. the stack b. The last element becomes the first. 
 
-rb (rotate b): Shift up all elements of stack b by 1.
-
-The first element becomes the last one.
-
-rr : ra and rb at the same time.
-
-rra (reverse rotate a): Shift down all elements of stack a by 1.
-
-The last element becomes the first one.
-
-rrb (reverse rotate b): Shift down all elements of stack b by 1.
-
-The last element becomes the first one.
-
-rrr : rra and rrb at the same time.
+🇲🇦 rrr : rra and rrb at the same time.
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
