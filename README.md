@@ -2,7 +2,8 @@
 
 
 
-![image](https://github.com/user-attachments/assets/d7f1fa58-be78-4c18-b2f7-8ccd13d78e00)
+![image](https://github.com/user-attachments/assets/215215d1-c4f9-49e5-833d-42c16b24d363)
+
 
 
 # Mandatory part
