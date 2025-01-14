@@ -5,8 +5,9 @@
 ![image](https://github.com/user-attachments/assets/d7f1fa58-be78-4c18-b2f7-8ccd13d78e00)
 
 
-Mandatory part
-V.1 The rules
+# Mandatory part
+
+.1 The rules
 
 • You have 2 stacks named a and b.
 
