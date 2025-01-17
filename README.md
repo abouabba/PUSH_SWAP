@@ -74,6 +74,8 @@ Normal rotation allows you to push all the numbers up and reverse rotation, all 
 
 ![image](https://github.com/user-attachments/assets/ac25da39-7728-4681-8b15-2b84ac94f636)
 
+And that's it for the instructions. Of course you will need to combine all the instructions in order to write your own algorithm. I hope that these few examples will help you to better understand this project and make coding easier for you. Let's start now !
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 # ****Algorithms****
