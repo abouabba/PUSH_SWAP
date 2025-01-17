@@ -62,6 +62,8 @@ The first element of stack A becomes the first element of stack B. Don't forget 
 
 Let's continue with the modified list above. We can also swap the first two numbers of a stack by using the "SWAP" operation.
 
+![image](https://github.com/user-attachments/assets/ed770b68-4d53-43a5-a77b-f4cf47c28c29)
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 # ****Algorithms****
