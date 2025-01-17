@@ -54,6 +54,9 @@ We have 6 random numbers, placed on a first stack, called stack A, as follows. O
 ![image](https://github.com/user-attachments/assets/dda016e2-af7b-4287-9c74-58c5d2c741eb)
 
 Let's say we want to move an element from stack A to stack B. This can be done with the "PUSH" operation. 
+
+![image](https://github.com/user-attachments/assets/98823f3a-7bc4-4f69-a117-904164504474)
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 # ****Algorithms****
