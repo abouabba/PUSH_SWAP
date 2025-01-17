@@ -70,6 +70,10 @@ One last type of operation can be done. The rotation. There are two types of rot
 
 Normal rotation allows you to push all the numbers up and reverse rotation, all the numbers down. Here is a schematic example of both rotations:
 
+![image](https://github.com/user-attachments/assets/f2d91118-ce14-47b9-b63c-983169533ceb)
+
+![image](https://github.com/user-attachments/assets/ac25da39-7728-4681-8b15-2b84ac94f636)
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 # ****Algorithms****
