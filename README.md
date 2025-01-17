@@ -69,6 +69,7 @@ Here we can see that the only two numbers that have been impacted are the first 
 One last type of operation can be done. The rotation. There are two types of rotations: rotation and reverse rotation. All the numbers in the stack are affected this time. 
 
 Normal rotation allows you to push all the numbers up and reverse rotation, all the numbers down. Here is a schematic example of both rotations:
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 # ****Algorithms****
