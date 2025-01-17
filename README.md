@@ -47,6 +47,11 @@ following operations at your disposal:
 
 🇲🇦 rrr : rra and rrb at the same time.
 
+# Examples
+
+We have 6 random numbers, placed on a first stack, called stack A, as follows. Obviously, stack B is empty at the beggining. Stack B will be used temporarily throughout your program, but must be empty again at the end, with the list sorted into stack A.
+
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 # ****Algorithms****
