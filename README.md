@@ -51,6 +51,7 @@ following operations at your disposal:
 
 We have 6 random numbers, placed on a first stack, called stack A, as follows. Obviously, stack B is empty at the beggining. Stack B will be used temporarily throughout your program, but must be empty again at the end, with the list sorted into stack A.
 
+![image](https://github.com/user-attachments/assets/dda016e2-af7b-4287-9c74-58c5d2c741eb)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
