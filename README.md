@@ -57,6 +57,11 @@ Let's say we want to move an element from stack A to stack B. This can be done w
 
 ![image](https://github.com/user-attachments/assets/98823f3a-7bc4-4f69-a117-904164504474)
 
+The first element of stack A becomes the first element of stack B. Don't forget then that the second element of the A stack becomes the first, and so on. Here stack B was empty, but if there were numbers in it, the first element of stack B would become the second and so on. The process is the same when you want to send an element from list B to list A.
+
+
+Let's continue with the modified list above. We can also swap the first two numbers of a stack by using the "SWAP" operation.
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 # ****Algorithms****
