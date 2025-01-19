@@ -45,51 +45,40 @@ int has_duplicates(long n, t_stack *a)
     return (0);
 
 }
+
+int err_exit(t_stack **head, char **arr)
+{
+    stack_clear(head);
+    if (arr)
+        free_arr(arr);
+    write(1, "error\n", 6);
+    exit(1);
+    return (0);
+}
+
 int parse_input(int ac, char **av, t_stack **a)
 {
     int     i;
     char    **tmp;
     int     j;
+    long    n;
 
-    i = 1;
-    while (i < ac)
+    i = 0;
+    while (++i < ac)
     {
         tmp = ft_split(av[i], ' ');
-        if(!tmp)
-            return(1);
-        if (tmp[0] == NULL)
-        {
-            free_arr(tmp);
-            write(1, "error\n", 6);
-            exit(1);
-        }
-        j = 0;
-        while (tmp[j])
+        if(!tmp || !tmp[0])
+            err_exit(a, tmp);
+        j = -1;
+        while (tmp[++j])
         {
             if (!is_valid_number(tmp[j]))
-            {
-                free_arr(tmp);
-                write(1, "error\n", 6);
-                exit(1);
-            }
-            long n = ft_atoi(tmp[j]);
-            if (n == 2147483648)
-            {
-                free_arr(tmp);
-                write(1, "error\n", 6);
-                exit(1);
-            }
-            if (has_duplicates(n, *a))
-            {
-                free_arr(tmp);
-                write(1, "error\n", 6);
-                exit(1);
-            }
-            push_back(a, n);
-            j++;
+                err_exit(a, tmp);
+            n = ft_atoi(tmp[j]);
+            if (n == 2147483648 || has_duplicates(n, *a) || !push_back(a, n))
+                return (err_exit(a, tmp));
         }
         free_arr(tmp);
-        i++;
     }
     return(0);
 }

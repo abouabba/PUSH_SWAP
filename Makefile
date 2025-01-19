@@ -2,11 +2,11 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-NAME = push_swap.a
+NAME = push_swap
 
 AR =  ar rc
 
-SRC = 	ft_atoi.c ft_split.c parse.c push_swap.c utils.c
+SRC = 	ft_atoi.c ft_split.c main.c parse.c stack_utils.c utils.c swap.c push.c
 
 OBJ = ${SRC:.c=.o}
 HEADER = push_swap.h
@@ -14,11 +14,11 @@ HEADER = push_swap.h
 
 all :${NAME}
 
-${NAME} :${OBJ}
+${NAME} : ${OBJ}
+	${CC} ${CFLAGS}  ${OBJ} -o ${NAME}
 
-%.o:%.c ${HEADER}
+%.o:%.c  ${HEADER}
 	${CC} ${CFLAGS} -c $< -o $@
-	${AR} ${NAME} $@
 
 clean:
 	rm -f ${OBJ}
