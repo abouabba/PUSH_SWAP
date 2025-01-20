@@ -4,12 +4,10 @@ void swap(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
-	t_stack	*third;
 
 	first = *stack;
 	second = first->next;
-	third = second->next;
-	first->next = third;
+	first->next = second->next;
 	second->next = first;
 	*stack = second;
 }
