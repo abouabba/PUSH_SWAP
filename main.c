@@ -43,7 +43,7 @@ int main(int ac, char **av)
 		// push(&stack_b, &stack_a);
 		// print_stack(stack_a);
 		// print_stack(stack_b);
-		// push(&stack_b, &stack_a);
+		push(&stack_b, &stack_a);
 		// print_stack(stack_a);
 		// print_stack(stack_b);
 		// swap(&stack_a);
