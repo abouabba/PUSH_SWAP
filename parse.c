@@ -62,7 +62,7 @@ int	err_exit(t_stack **head, char **arr)
 	stack_clear(head);
 	if (arr)
 		free_arr(arr);
-	write (1, "error\n", 6);
+	write (2, "error\n", 6);
 	exit(1);
 	return (0);
 }
