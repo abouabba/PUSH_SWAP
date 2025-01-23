@@ -6,7 +6,7 @@ In this repository, you'll find my implementation of the push swap project, as w
 
 ## Installation and Usage
 
-To install Push Swap [download](https://github.com/abouabba/push_swap/archive/master.zip) the program and use the command 'cd' to move to the push_swap folder.
+To install Push Swap [download](https://github.com/abouabba/PUSH_SWAP) the program and use the command 'cd' to move to the push_swap folder.
 
 Run 'make' to compile all the files and run the executable 'push_swap' followed by a random number of integers
 
