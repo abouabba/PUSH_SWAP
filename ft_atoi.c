@@ -3,9 +3,9 @@
 
 long	ft_atoi(const char	*str)
 {
-	int				i;
-	long	        n;
-	int				a;
+	int	i;
+	long	n;
+	int	a;
 
 	i = 0;
 	n = 0;
