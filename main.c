@@ -10,7 +10,6 @@ void	print_stack(t_stack *s)
 		printf("-> %d\n", s->value);
 		s = s->next;
 	}
-	printf("-----------------------\n");
 }
 
 int main(int ac, char **av)
