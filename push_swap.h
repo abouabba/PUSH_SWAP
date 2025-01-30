@@ -29,6 +29,8 @@ t_stack		*new_stack(int n);
 int			push_back(t_stack **head, int n);
 int			stack_size(t_stack *s);
 int	sorting_3(t_stack **stack_a);
+int sorting_4(t_stack **stack_a, t_stack **stack_b);
+int sorting_5(t_stack **stack_a, t_stack **stack_b);
 
 void		swap(t_stack **stack);
 void		push(t_stack **dst, t_stack **src);
