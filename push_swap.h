@@ -51,5 +51,6 @@ void	sb(t_stack **stack_b);
 void	ss(t_stack **stack_a, t_stack **stack_b);
 void push_to_b(t_stack **stack_a, t_stack **stack_b);
 int is_sorted(t_stack *stack);
+void index_stack(t_stack *stack);
 
 #endif
