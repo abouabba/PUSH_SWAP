@@ -33,20 +33,26 @@ int main(int ac, char **av)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if(ac > 2)
+	if(ac >= 2)
 	{
 		parse_input(ac, av, &stack_a);
+		index_stack(stack_a);
 		if (is_sorted(stack_a))
 			exit(0);
-		if (ac == 3)
+		if (stack_size(stack_a) == 2)
 			sa(&stack_a);
-		if (ac == 4)
+		if (stack_size(stack_a) == 3)
 			sorting_3(&stack_a);
-		else if (ac == 5)
+		else if (stack_size(stack_a) == 4)
 			sorting_4(&stack_a, &stack_b);
-		else if (ac == 6)
+		else if (stack_size(stack_a) == 5)
 			sorting_5(&stack_a, &stack_b);
-		print_stack(stack_a);
-		print_stack(stack_b);
+		while(stack_a)
+		{
+			printf("----(%d)--->(%d)--->(%p)\n", stack_a->value, stack_a->index, stack_a->next);
+			stack_a = stack_a->next;
+		}
+		// print_stack(stack_a);
+		// print_stack(stack_b);
 	}
 }

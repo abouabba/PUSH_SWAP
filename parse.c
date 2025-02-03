@@ -53,7 +53,6 @@ int	err_exit(t_stack **head, char **arr)
 		free_arr(arr);
 	write (2, "Error\n", 6);
 	exit(1);
-	return (0);
 }
 
 int parse_input(int ac, char **av, t_stack **a)
