@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotate.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/05 22:29:36 by abouabba          #+#    #+#             */
+/*   Updated: 2025/02/05 22:32:57 by abouabba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -7,13 +18,13 @@ void	rotate(t_stack **stack)
 	t_stack	*second;
 	t_stack	*last;
 
+	if (*stack == NULL || (*stack)->next == NULL)
+		return ;
 	last = *stack;
 	tmp = *stack;
 	second = (*stack)->next;
-	while(last->next)
-	{
+	while (last->next)
 		last = last->next;
-	}
 	last->next = tmp;
 	*stack = second;
 	tmp->next = NULL;

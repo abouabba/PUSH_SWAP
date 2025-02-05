@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/05 22:28:20 by abouabba          #+#    #+#             */
+/*   Updated: 2025/02/05 22:29:07 by abouabba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    reverse_rotate(t_stack **stack)
+void	reverse_rotate(t_stack **stack)
 {
 	t_stack	*tmp;
 	t_stack	*last;
@@ -10,7 +21,7 @@ void    reverse_rotate(t_stack **stack)
 	tmp = *stack;
 	last = *stack;
 	second_to_last = *stack;
-	while(last->next)
+	while (last->next)
 	{
 		second_to_last = last;
 		last = last->next;
@@ -28,7 +39,7 @@ void	rra(t_stack **stack_a)
 	write (1, "rra\n", 4);
 }
 
-void	rrb(t_stack ** stack_b)
+void	rrb(t_stack **stack_b)
 {
 	if (stack_size(*stack_b) <= 1)
 		return ;
@@ -36,7 +47,7 @@ void	rrb(t_stack ** stack_b)
 	write (1, "rrb\n", 4);
 }
 
-void	rrr(t_stack ** stack_a, t_stack **stack_b)
+void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	if (stack_size(*stack_a) <= 1 || stack_size(*stack_b) <= 1)
 		return ;

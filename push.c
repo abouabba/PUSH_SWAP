@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/05 22:27:43 by abouabba          #+#    #+#             */
+/*   Updated: 2025/02/05 22:27:44 by abouabba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -11,7 +22,7 @@ void	add_front(t_stack **head, t_stack *new)
 
 void	push(t_stack **dst, t_stack **src)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	tmp = *src;
 	*src = (*src)->next;

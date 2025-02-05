@@ -7,7 +7,7 @@ NAME = push_swap
 AR =  ar rc
 
 SRC = 	ft_atoi.c ft_split.c main.c parse.c stack_utils.c utils.c swap.c push.c rotate.c \
-		 reverse_rotate.c sorting_3.c sorting_4.c sorting_5.c index.c
+		 reverse_rotate.c sorting_3.c sorting_4.c sorting_5.c index.c push_to_b.c algo.c
 
 OBJ = ${SRC:.c=.o}
 HEADER = push_swap.h
