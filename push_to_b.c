@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 22:25:55 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/06 12:02:40 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/06 13:49:17 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,21 @@ int	protect(t_stack **stack_a)
 	return (i);
 }
 
+void	init_push_b(t_stack **stack_a, int *index, int *range, int *test)
+{
+	*index = 0;
+	*test = protect(stack_a) > (stack_size(*stack_a)) / 3;
+	*range = ft_range(stack_a);
+}
+
 void	push_to_b(t_stack **stack_a, t_stack **stack_b)
 {
 	int		index;
 	int		range;
 	t_stack	*head;
+	int		test;
 
-	index = 0;
-	range = ft_range(stack_a);
+	init_push_b(stack_a, &index, &range, &test);
 	while (*stack_a)
 	{
 		head = *stack_a;
@@ -64,7 +71,7 @@ void	push_to_b(t_stack **stack_a, t_stack **stack_b)
 			rb(stack_b);
 			index++;
 		}
-		else if (protect(stack_a) > (stack_size(*stack_a)) / 3)
+		else if (test)
 			rra(stack_a);
 		else
 			ra(stack_a);
