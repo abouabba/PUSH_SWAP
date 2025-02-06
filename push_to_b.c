@@ -6,11 +6,41 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 22:25:55 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/05 22:26:31 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:02:40 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	ft_range(t_stack **stack_a)
+{
+	int	size;
+
+	size = stack_size(*stack_a);
+	if (size > 100)
+		return (32);
+	else
+		return (11);
+}
+
+int	protect(t_stack **stack_a)
+{
+	int		i;
+	int		j;
+	t_stack	*head;
+
+	i = 0;
+	j = 0;
+	head = *stack_a;
+	while (j < stack_size(*stack_a) / 2)
+	{
+		if (head->value > head->next->value)
+			i++;
+		j++;
+		head = head->next;
+	}
+	return (i);
+}
 
 void	push_to_b(t_stack **stack_a, t_stack **stack_b)
 {
@@ -19,7 +49,7 @@ void	push_to_b(t_stack **stack_a, t_stack **stack_b)
 	t_stack	*head;
 
 	index = 0;
-	range = 11;
+	range = ft_range(stack_a);
 	while (*stack_a)
 	{
 		head = *stack_a;
@@ -34,6 +64,8 @@ void	push_to_b(t_stack **stack_a, t_stack **stack_b)
 			rb(stack_b);
 			index++;
 		}
+		else if (protect(stack_a) > (stack_size(*stack_a)) / 3)
+			rra(stack_a);
 		else
 			ra(stack_a);
 	}

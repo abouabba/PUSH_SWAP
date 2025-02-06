@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 21:29:01 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/05 22:53:50 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:35:38 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void	algo(t_stack **stack_a, t_stack **stack_b)
 	int		median;
 	t_stack	*max_node;
 
+	push_to_b(stack_a, stack_b);
+	add_index(*stack_b);
 	if (!(*stack_b))
 		return ;
 	while (*stack_b)
@@ -64,4 +66,5 @@ void	algo(t_stack **stack_a, t_stack **stack_b)
 		}
 		pa(stack_a, stack_b);
 	}
+	stack_clear(stack_b);
 }

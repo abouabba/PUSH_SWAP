@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 21:39:02 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/05 22:54:00 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:36:19 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,7 @@ int	main(int ac, char **av)
 		else if (stack_size(stack_a) == 5)
 			sorting_5(&stack_a, &stack_b);
 		else
-		{
-			push_to_b(&stack_a, &stack_b);
-			add_index(stack_b);
 			algo(&stack_a, &stack_b);
-		}
 	}
+	stack_clear(&stack_a);
 }
