@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   utils_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 22:39:47 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/05 22:39:48 by abouabba         ###   ########.fr       */
+/*   Created: 2025/02/07 22:42:05 by abouabba          #+#    #+#             */
+/*   Updated: 2025/02/08 00:12:08 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
-int	ft_isdigit(char c)
+int	ft_strcmp(char *s1, char *s2)
 {
-	return (c >= '0' && c <= '9');
+	int	i;
+
+	i = 0;
+	while (s1[i] && s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (s1[i] - s2[i]);
+}
+
+size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -61,12 +80,30 @@ char	*ft_strdup(const char *s1)
 	return (s2);
 }
 
-size_t	ft_strlen(const char *s)
+long	ft_atoi(const char	*str)
 {
-	int	i;
+	int		i;
+	long	n;
+	int		a;
 
 	i = 0;
-	while (s[i])
+	n = 0;
+	a = 1;
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
 		i++;
-	return (i);
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			a = -1;
+		i++;
+	}
+	while (ft_isdigit(str[i]))
+	{
+		n = n * 10 + (str[i] - 48);
+		if (n * a > 2147483647 || n * a < -2147483648)
+			return (2147483648);
+		i++;
+	}
+	return (n * a);
 }

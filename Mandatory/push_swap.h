@@ -6,14 +6,13 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 22:13:19 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/05 22:24:15 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/07 20:28:35 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -60,7 +59,6 @@ void		ss(t_stack **stack_a, t_stack **stack_b);
 void		push_to_b(t_stack **stack_a, t_stack **stack_b);
 int			is_sorted(t_stack *stack);
 void		index_stack(t_stack *stack);
-void		push_to_b(t_stack **stack_a, t_stack **stack_b);
 int			find_min_index(t_stack *stack);
 void		algo(t_stack **stack_a, t_stack **stack_b);
 void		add_index(t_stack *stack);

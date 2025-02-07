@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 21:39:02 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/06 13:38:29 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/06 22:36:25 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(int ac, char **av)
 		parse_input(ac, av, &stack_a);
 		index_stack(stack_a);
 		if (is_sorted(stack_a))
-			exit(0);
+			return (stack_clear(&stack_a), 0);
 		if (stack_size(stack_a) == 2)
 			sa(&stack_a);
 		else if (stack_size(stack_a) == 3)
