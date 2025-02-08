@@ -6,11 +6,24 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 21:47:51 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/08 00:55:39 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:30:11 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+void	apply_stored_moves(t_stack **stack_a, t_stack **stack_b, t_move *moves)
+{
+	while (moves)
+	{
+		if (!apply_move(stack_a, stack_b, moves->move))
+		{
+			write (1, "Error\n", 6);
+			exit(1);
+		}
+		moves = moves->next;
+	}
+}
 
 int	is_sorted(t_stack *stack)
 {
@@ -26,7 +39,7 @@ int	is_sorted(t_stack *stack)
 	return (1);
 }
 
-void	execute_moves(t_stack **stack_a, t_stack **stack_b)
+void	execute_moves(t_stack **stack_a, t_stack **stack_b, t_move **moves)
 {
 	char	*line;
 
@@ -35,9 +48,10 @@ void	execute_moves(t_stack **stack_a, t_stack **stack_b)
 		if (!apply_move(stack_a, stack_b, line))
 		{
 			free(line);
-			write (1, "Error\n", 6);
+			write(1, "Error\n", 6);
 			exit(1);
 		}
+		add_move(moves, line);
 		free(line);
 	}
 }
@@ -46,13 +60,16 @@ int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
+	t_move	*moves;
 
 	stack_a = NULL;
 	stack_b = NULL;
+	moves = NULL;
 	if (ac >= 2)
 	{
 		parse_input(ac, av, &stack_a);
-		execute_moves(&stack_a, &stack_b);
+		execute_moves(&stack_a, &stack_b, &moves);
+		apply_stored_moves(&stack_a, &stack_b, moves);
 		if (is_sorted(stack_a) && (stack_b = NULL))
 			write (1, "OK\n", 3);
 		else
