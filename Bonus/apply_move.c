@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 22:08:00 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/08 12:12:46 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/08 18:15:24 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,23 @@ int	apply_move(t_stack **a, t_stack **b, char *move)
 	else
 		return (0);
 	return (1);
+}
+
+int	check_move(t_stack **a, t_stack **b, char *move)
+{
+	(void)*a;
+	(void)*b;
+	if ((!ft_strcmp(move, "sa\n"))
+	|| (!ft_strcmp(move, "sb\n"))
+	|| (!ft_strcmp(move, "ss\n"))
+	|| (!ft_strcmp(move, "pa\n"))
+	|| (!ft_strcmp(move, "pb\n"))
+	|| (!ft_strcmp(move, "ra\n"))
+	|| (!ft_strcmp(move, "rb\n"))
+	|| (!ft_strcmp(move, "rr\n"))
+	|| (!ft_strcmp(move, "rra\n"))
+	|| (!ft_strcmp(move, "rrb\n"))
+	|| (!ft_strcmp(move, "rrr\n")))
+		return (1);
+	return (0);
 }
