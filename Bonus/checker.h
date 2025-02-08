@@ -6,19 +6,13 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 22:13:19 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/08 18:13:46 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/08 23:30:22 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 # include "../Bonus/GNL/get_next_line.h"
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-# include <stdio.h>
-
-#  define BUFFER_SIZE 42
 
 typedef struct s_stack
 {
@@ -73,8 +67,8 @@ int			apply_move(t_stack **a, t_stack **b, char *move);
 int			ft_strcmp(char *s1, char *s2);
 void		execute_moves(t_stack **stack_a, t_stack **stack_b, t_move **moves);
 void		add_move(t_move **moves, char *move);
-void		apply_stored_moves(t_stack **stack_a, t_stack **stack_b, t_move *moves);
-int	check_move(t_stack **a, t_stack **b, char *move);
-
+void		apply_stored_moves(t_stack **stack_a,
+				t_stack **stack_b, t_move *moves);
+int			check_move(t_stack **a, t_stack **b, char *move);
 
 #endif

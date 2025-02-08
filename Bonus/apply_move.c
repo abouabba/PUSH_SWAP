@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 22:08:00 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/08 18:15:24 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/08 23:31:19 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,25 +37,25 @@ int	apply_move(t_stack **a, t_stack **b, char *move)
 {
 	if (!ft_strcmp(move, "sa\n"))
 		sa(a);
-	else if(!ft_strcmp(move, "sb\n"))
+	else if (!ft_strcmp(move, "sb\n"))
 		sb(b);
-	else if(!ft_strcmp(move, "ss\n"))
+	else if (!ft_strcmp(move, "ss\n"))
 		ss(a, b);
-	else if(!ft_strcmp(move, "pa\n"))
+	else if (!ft_strcmp(move, "pa\n"))
 		pa(a, b);
-	else if(!ft_strcmp(move, "pb\n"))
+	else if (!ft_strcmp(move, "pb\n"))
 		pb(a, b);
-	else if(!ft_strcmp(move, "ra\n"))
+	else if (!ft_strcmp(move, "ra\n"))
 		ra(a);
-	else if(!ft_strcmp(move, "rb\n"))
+	else if (!ft_strcmp(move, "rb\n"))
 		rb(b);
-	else if(!ft_strcmp(move, "rr\n"))
+	else if (!ft_strcmp(move, "rr\n"))
 		rr(a, b);
-	else if(!ft_strcmp(move, "rra\n"))
+	else if (!ft_strcmp(move, "rra\n"))
 		rra(a);
-	else if(!ft_strcmp(move, "rrb\n"))
+	else if (!ft_strcmp(move, "rrb\n"))
 		rrb(b);
-	else if(!ft_strcmp(move, "rrr\n"))
+	else if (!ft_strcmp(move, "rrr\n"))
 		rrr(a, b);
 	else
 		return (0);
@@ -67,16 +67,16 @@ int	check_move(t_stack **a, t_stack **b, char *move)
 	(void)*a;
 	(void)*b;
 	if ((!ft_strcmp(move, "sa\n"))
-	|| (!ft_strcmp(move, "sb\n"))
-	|| (!ft_strcmp(move, "ss\n"))
-	|| (!ft_strcmp(move, "pa\n"))
-	|| (!ft_strcmp(move, "pb\n"))
-	|| (!ft_strcmp(move, "ra\n"))
-	|| (!ft_strcmp(move, "rb\n"))
-	|| (!ft_strcmp(move, "rr\n"))
-	|| (!ft_strcmp(move, "rra\n"))
-	|| (!ft_strcmp(move, "rrb\n"))
-	|| (!ft_strcmp(move, "rrr\n")))
+		|| (!ft_strcmp(move, "sb\n"))
+		|| (!ft_strcmp(move, "ss\n"))
+		|| (!ft_strcmp(move, "pa\n"))
+		|| (!ft_strcmp(move, "pb\n"))
+		|| (!ft_strcmp(move, "ra\n"))
+		|| (!ft_strcmp(move, "rb\n"))
+		|| (!ft_strcmp(move, "rr\n"))
+		|| (!ft_strcmp(move, "rra\n"))
+		|| (!ft_strcmp(move, "rrb\n"))
+		|| (!ft_strcmp(move, "rrr\n")))
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 21:47:51 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/08 18:16:52 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/08 23:31:01 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void	execute_moves(t_stack **stack_a, t_stack **stack_b, t_move **moves)
 {
 	char	*line;
 
-	while ((line = get_next_line(0)))
+	line = get_next_line(0);
+	while (line)
 	{
 		if (!check_move(stack_a, stack_b, line))
 		{
@@ -53,6 +54,7 @@ void	execute_moves(t_stack **stack_a, t_stack **stack_b, t_move **moves)
 		}
 		add_move(moves, line);
 		free(line);
+		line = get_next_line(0);
 	}
 }
 
@@ -70,7 +72,6 @@ int	main(int ac, char **av)
 		parse_input(ac, av, &stack_a);
 		execute_moves(&stack_a, &stack_b, &moves);
 		apply_stored_moves(&stack_a, &stack_b, moves);
-	
 		if (is_sorted(stack_a) && (stack_b == NULL))
 			write (1, "OK\n", 3);
 		else
