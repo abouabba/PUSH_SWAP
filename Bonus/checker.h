@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 22:13:19 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/08 23:30:22 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/09 09:56:51 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void		stack_clear(t_stack **head);
 int			push_back(t_stack **head, int n);
 int			stack_size(t_stack *s);
 void		swap(t_stack **stack);
-void		push(t_stack **dst, t_stack **src);
 void		rotate(t_stack **stack);
 void		reverse_rotate(t_stack **stack);
 void		add_front(t_stack **head, t_stack *new);

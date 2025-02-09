@@ -6,11 +6,24 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 21:47:51 by abouabba          #+#    #+#             */
-/*   Updated: 2025/02/08 23:31:01 by abouabba         ###   ########.fr       */
+/*   Updated: 2025/02/09 10:43:10 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+void	free_moves(t_move **moves)
+{
+	t_move	*tmp;
+
+	while (*moves)
+	{
+		tmp = (*moves)->next;
+		free((*moves)->move);
+		free(*moves);
+		*moves = tmp;
+	}
+}
 
 void	apply_stored_moves(t_stack **stack_a, t_stack **stack_b, t_move *moves)
 {
@@ -49,7 +62,11 @@ void	execute_moves(t_stack **stack_a, t_stack **stack_b, t_move **moves)
 		if (!check_move(stack_a, stack_b, line))
 		{
 			free(line);
+			free_moves(moves);
+			stack_clear(stack_a);
+			stack_clear(stack_b);
 			write(1, "Error\n", 6);
+			get_next_line(-1);
 			exit(1);
 		}
 		add_move(moves, line);
@@ -79,5 +96,6 @@ int	main(int ac, char **av)
 	}
 	stack_clear(&stack_a);
 	stack_clear(&stack_b);
+	free_moves(&moves);
 	return (0);
 }
