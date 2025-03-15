@@ -22,7 +22,9 @@ BONUS = Bonus/checker.c Bonus/apply_move.c Bonus/checker_utils.c \
 OBJ = ${SRC:.c=.o}
 BONUS_OBJ = ${BONUS:.c=.o}
 
-HEADER = Mandatory/push_swap.h Bonus/checker.h
+HEADER = Mandatory/push_swap.h
+
+HEADER_BONUS = Bonus/checker.h
 
 all :${NAME}
 
@@ -35,6 +37,8 @@ bonus : ${BONUS_OBJ}
 %.o:%.c  ${HEADER}
 	${CC} ${CFLAGS} -c $< -o $@
 
+%.o:%.c  ${HEADER_BONUS}
+	${CC} ${CFLAGS} -c $< -o $@
 clean:
 	rm -f ${OBJ} ${BONUS_OBJ}
 
