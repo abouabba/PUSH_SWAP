@@ -6,8 +6,6 @@ NAME = push_swap
 
 BONUS_NAME = checker
 
-AR =  ar rc
-
 SRC = 	Mandatory/algo.c Mandatory/ft_atoi.c Mandatory/index.c Mandatory/parse.c \
 		Mandatory/rotate.c Mandatory/sorting_4.c Mandatory/stack_utils.c Mandatory/utils.c \
 		Mandatory/ft_split.c Mandatory/main.c Mandatory/push.c Mandatory/push_to_b.c \
